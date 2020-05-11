@@ -15,35 +15,17 @@
 
 package com.emanuel.sfgmypetclinic.model;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Pet extends BaseEntity {
+public class BaseEntity implements Serializable {
 
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDate;
+    private Long id;
 
-    public PetType getPetType() {
-        return petType;
+    public Long getId() {
+        return id;
     }
 
-    public void setPetType(PetType petType) {
-        this.petType = petType;
-    }
-
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public void setId(Long id) {
+        this.id = id;
     }
 }
