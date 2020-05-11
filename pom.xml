@@ -14,7 +14,7 @@
 	</parent>
 	<groupId>com.emanuel</groupId>
 	<artifactId>sfg-my-pet-clinic</artifactId>
-	<version>0.0.1-SNAPSHOt</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>sfg-my-pet-clinic</name>
 	<description>SFG My Pet Clinic Project</description>
 
