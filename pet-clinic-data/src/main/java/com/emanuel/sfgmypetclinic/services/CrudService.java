@@ -15,10 +15,17 @@
 
 package com.emanuel.sfgmypetclinic.services;
 
-import com.emanuel.sfgmypetclinic.model.Owner;
+import java.util.Set;
 
-public interface OwnerService extends CrudService<Owner, Long> {
+public interface CrudService<T, ID> {
 
-    Owner findByLastName(String lastName);
+    Set<T> findAll();
 
+    T findById(ID id);
+
+    T save(T object);
+
+    void delete(T object);
+
+    void deleteById(ID id);
 }

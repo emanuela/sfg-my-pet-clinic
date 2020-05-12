@@ -17,13 +17,6 @@ package com.emanuel.sfgmypetclinic.services;
 
 import com.emanuel.sfgmypetclinic.model.Vet;
 
-import java.util.Set;
+public interface VetService extends CrudService<Vet, Long> {
 
-public interface VetService {
-
-    Vet findById(Long id);
-
-    Vet save(Vet owvetner);
-
-    Set<Vet> findAll();
 }
