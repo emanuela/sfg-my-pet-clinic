@@ -1,0 +1,9 @@
+com/emanuel/sfgmypetclinic/model/Vet.class
+com/emanuel/sfgmypetclinic/services/VetService.class
+com/emanuel/sfgmypetclinic/services/OwnerService.class
+com/emanuel/sfgmypetclinic/model/Person.class
+com/emanuel/sfgmypetclinic/services/PetService.class
+com/emanuel/sfgmypetclinic/model/PetType.class
+com/emanuel/sfgmypetclinic/model/BaseEntity.class
+com/emanuel/sfgmypetclinic/model/Pet.class
+com/emanuel/sfgmypetclinic/model/Owner.class
