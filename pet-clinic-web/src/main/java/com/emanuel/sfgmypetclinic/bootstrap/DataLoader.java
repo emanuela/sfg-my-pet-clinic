@@ -30,6 +30,12 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
+    // @Autowired is no longer required with a constructor like the following.
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
+    }
+
     public DataLoader() {
         ownerService = new OwnerServiceMap();
         vetService = new VetServiceMap();
