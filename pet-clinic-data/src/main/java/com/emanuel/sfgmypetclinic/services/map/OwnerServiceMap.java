@@ -16,11 +16,11 @@
 package com.emanuel.sfgmypetclinic.services.map;
 
 import com.emanuel.sfgmypetclinic.model.Owner;
-import com.emanuel.sfgmypetclinic.services.CrudService;
+import com.emanuel.sfgmypetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -45,5 +45,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void delete(Owner object) {
         super.delete(object);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }

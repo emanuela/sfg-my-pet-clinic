@@ -16,11 +16,11 @@
 package com.emanuel.sfgmypetclinic.services.map;
 
 import com.emanuel.sfgmypetclinic.model.Vet;
-import com.emanuel.sfgmypetclinic.services.CrudService;
+import com.emanuel.sfgmypetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
