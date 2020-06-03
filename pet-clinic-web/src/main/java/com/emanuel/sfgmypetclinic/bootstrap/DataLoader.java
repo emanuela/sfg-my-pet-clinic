@@ -16,11 +16,11 @@
 package com.emanuel.sfgmypetclinic.bootstrap;
 
 import com.emanuel.sfgmypetclinic.model.Owner;
+import com.emanuel.sfgmypetclinic.model.PetType;
 import com.emanuel.sfgmypetclinic.model.Vet;
 import com.emanuel.sfgmypetclinic.services.OwnerService;
+import com.emanuel.sfgmypetclinic.services.PetTypeService;
 import com.emanuel.sfgmypetclinic.services.VetService;
-import com.emanuel.sfgmypetclinic.services.map.OwnerServiceMap;
-import com.emanuel.sfgmypetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -29,20 +29,30 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
     // @Autowired is no longer required with a constructor like the following.
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-    }
+//    public DataLoader() {
+//        ownerService = new OwnerServiceMap();
+//        vetService = new VetServiceMap();
+//    }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedCatPetType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
