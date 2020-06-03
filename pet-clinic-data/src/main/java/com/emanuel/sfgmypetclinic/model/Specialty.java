@@ -15,17 +15,15 @@
 
 package com.emanuel.sfgmypetclinic.model;
 
-import java.util.Set;
+public class Specialty extends BaseEntity {
 
-public class Vet extends Person {
+    private String description;
 
-    private Set<Specialty> specialties;
-
-    public Set<Specialty> getSpecialties() {
-        return specialties;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSpecialties(Set<Specialty> specialties) {
-        this.specialties = specialties;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
