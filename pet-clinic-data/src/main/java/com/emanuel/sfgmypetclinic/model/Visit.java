@@ -15,17 +15,35 @@
 
 package com.emanuel.sfgmypetclinic.model;
 
-import java.util.Set;
+import java.time.LocalDate;
 
-public class Owner extends Person {
+public class Visit extends BaseEntity {
 
-    private Set<Pet> pets;
+    private LocalDate date;
+    private String description;
+    private Pet pet;
 
-    public Set<Pet> getPets() {
-        return pets;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
     }
 }
